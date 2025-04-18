@@ -106,12 +106,12 @@ batch_size = 16 * len(os.environ['CUDA_VISIBLE_DEVICES'].split(','))
 val_batch_size = 32 * len(os.environ['CUDA_VISIBLE_DEVICES'].split(','))  # 4* batch_size#2
 
 start_epoch = 0
-epochs = 1400
+epochs = 800
 lr_controler = 11
 print_freq = 10
 if optimizer_name == 'Adam':
-    lr = 1e-5
-    epochs = 1400
+    lr = 1e-4
+    epochs = 800
 
 ###loss function#####################################
 loss_function_name = "class_weight_focal"  # Asl_singlelabel Asl_multilabel dice_loss cross_entropy custom focal triplet_loss_soft_margin_batch_soft
@@ -247,7 +247,7 @@ if lr_scheduler_name == 'MultiStepLR':
         # 'milestones': [60-64, 90-64],
         # 'milestones': [25, 50, 75],
         # 'milestones': [30, 60, 90],
-        'milestones': [300, 600, 900],
+        'milestones': [400, 600],
         # 'milestones': [50, 100, 150, 200],
         # 'milestones': [120, 180, 240],
         # 'milestones': [60, 120, 180],
