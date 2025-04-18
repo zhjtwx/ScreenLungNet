@@ -20,7 +20,8 @@ pip install -r requirements.txt
 
 #### Usage
 This article mainly introduces the training and reasoning of the main framework; other individual model can be adjusted according to the parameters of the paper.
-![](/Users/deepwise/Library/Containers/com.tencent.xinWeChat/Data/Library/Caches/com.tencent.xinWeChat/2.0b4.0.9/03bb467d72339b4a93f3c44b074fd6c8/dragImgTmp/WeChatdae6db8f0bab7ec665f808fa0dbfe678.png)
+![Uploading WeChatdae6db8f0bab7ec665f808fa0dbfe678.png…]()
+
 - ScreenLungNet model：All models are saved in the model folder. The Multi-Nodule Model is implemented in the mlp.py file, and the Global Lung Model is implemented in the vit.py file.
     ```
     # train 
