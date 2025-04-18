@@ -118,7 +118,7 @@ def train(train_loader, model, criterion, optimizer, epoch, logger, gpu_jitter=N
             loss_mlp = criterion(mlp_cls, label_mb_var)
             loss_fusion = criterion(all_cls_mb, label_mb_var)
 
-            loss_tol = 0.2 * loss_vit + 5 * loss_mlp + 1*loss_fusion
+            loss_tol = loss_vit + loss_mlp + loss_fusion
             one_epoch_pred = F.softmax(all_cls_mb, dim=1)
 
         if config.confusion and feat.size(0) % 2 == 0:
@@ -204,7 +204,7 @@ def validation(val_loader, model, criterion, epoch, logger, optimizer, save_file
             loss_mlp = criterion(mlp_cls, target_var)
             loss_fusion = criterion(all_cls_mb, target_var)
 
-            loss_tol = 0.2 * loss_vit + 5 * loss_mlp + 1*loss_fusion
+            loss_tol = loss_vit + loss_mlp + loss_fusion
             one_epoch_pred = F.softmax(all_cls_mb, dim=1)
 
             optimizer.zero_grad()
