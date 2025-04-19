@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 #### Usage
 This article mainly introduces the training and reasoning of the main framework; other individual model can be adjusted according to the parameters of the paper.
-![Uploading WeChatdae6db8f0bab7ec665f808fa0dbfe678.png…]()
+![示例图片](https://github.com/zhjtwx/ScreenLungNet/raw/main/model.png)
 
 - ScreenLungNet model：All models are saved in the model folder. The Multi-Nodule Model is implemented in the mlp.py file, and the Global Lung Model is implemented in the vit.py file.
     ```
